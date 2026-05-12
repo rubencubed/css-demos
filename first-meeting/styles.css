@@ -1,0 +1,82 @@
+/* heading text wrap balance */
+#text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #eee;
+}
+
+.fake-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    max-width: 500px;
+}
+
+/* accordion/FAQs */
+#accordion {
+    border-top: 2px solid #002D72;
+}
+
+#accordion details {
+    border-bottom: 1px solid #c8c8c8;
+}
+
+#accordion summary {
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding: 24px 56px 24px 0;
+    font-size: 28px;
+    color: #002D72;
+}
+
+#accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+#accordion summary::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 36px;
+    height: 36px;
+    transform: translateY(-50%);
+    content: "▾";
+    border-radius: 50%;
+    background: #002D72;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+}
+
+#accordion details[open] summary::after {
+    transform: rotate(180deg) translateY(50%);
+}
+
+#accordion .panel {
+    margin-bottom: 24px;
+    padding: 32px 36px;
+    background: #f1f1f1;
+    color: #222;
+    font-size: 22px;
+    line-height: 1.45;
+}
+
+#accordion .panel p {
+    margin: 0 0 28px;
+}
+
+#accordion .panel p:last-child {
+    margin-bottom: 0;
+}
+
+#accordion .panel hr {
+    border: 0;
+    border-top: 2px solid #c7c7c7;
+    margin: 32px 0;
+}
