@@ -1,199 +1,253 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>First Meeting CSS Forum</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="../resets.css" />
-  </head>
-  <body>
-    <h1>First Meeting CSS Forum</h1>
 
-    <h2>Balanced Text Wrap</h2>
-    <section id="text-wrap">
-      <p class="fake-heading">
-        This book title is long and does not wrap nicely.
-      </p>
-      <p class="fake-heading" style="text-wrap: balance">
-        This book title does wrap nicely despite its length.
-      </p>
-      <p class="fake-heading" style="text-wrap: balance; text-align: center">
-        This book title wraps nicely and is centered.
-      </p>
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First Meeting CSS Forum</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../resets.css" />
+</head>
 
-    <h2>Accordions</h2>
-    <h3>Indentical FAQs, No JavaScript</h3>
-    <section id="accordion">
-      <details name="faqs">
-        <summary>Author Guidelines</summary>
-        <div class="panel">
-          <p>
-            Manuscripts submitted for consideration should present original
-            research, critical analysis, or interdisciplinary scholarship
-            relevant to the journal’s scope. Submissions must not exceed 7,000
-            words including references, notes, and appendices.
-          </p>
+<body>
+  <h1>First Meeting CSS Forum</h1>
 
-          <hr />
-
-          <p>
-            Authors are encouraged to include a concise abstract of no more than
-            150 words, followed by 4–6 keywords. Citations should conform to the
-            latest edition of the Chicago Manual of Style. All submissions must
-            be anonymized for peer review.
-          </p>
-
-          <p>
-            Papers should be submitted electronically in Microsoft Word format.
-            Questions regarding manuscript preparation may be directed to
-            <a href="#">Journals Support</a>.
-          </p>
+  <h2>Balanced Text Wrap</h2>
+  <section id="text-wrap">
+    <div class="book-display">
+      <img src="../images/book-covers/boards.jpg" alt="">
+      <div class="text-holder">
+        <div class="fake-heading">
+          This book title is long and does not wrap nicely.
         </div>
-      </details>
+        <p>Donec in quam ullamcorper, blandit mi id, convallis tellus. Duis a laoreet tortor, in finibus enim. Sed
+          convallis nulla vitae lobortis consequat. Sed porta venenatis augue, at fermentum nisi congue eget. Donec
+          vitae
+          mi ac tortor suscipit molestie eget vitae elit. Morbi tortor sem, fringilla vel quam non, lobortis accumsan.
+        </p>
+        <p>Nullam vehicula fringilla posuere. Morbi commodo sagittis pharetra. Sed nec leo et lectus sollicitudin
+          placerat
+          nec et purus. Quisque ut sollicitudin massa. Integer varius quis enim eu iaculis. Etiam at diam sit amet enim
+          maximus tempor non ut purus. In hac habitasse platea dictumst.</p>
+      </div>
+    </div>
 
-      <details name="faqs">
-        <summary>Publication Ethics</summary>
-        <div class="panel">
-          <p>
-            The journal adheres to internationally recognized standards
-            concerning publication ethics, plagiarism prevention, and academic
-            integrity. Submitted work must be original and may not be under
-            review elsewhere.
-          </p>
+    <hr>
 
-          <hr />
+    <div class="book-display">
+      <img src="../images/book-covers/rats.jpg" alt="">
 
-          <p>
-            Authors are responsible for obtaining permissions for copyrighted
-            materials, images, and datasets used within their manuscripts. Cases
-            of duplicate publication or fabricated data will result in immediate
-            rejection.
-          </p>
-
-          <p>
-            Reviewers and editors are expected to disclose any conflicts of
-            interest that could influence editorial decisions.
-          </p>
+      <div class="text-holder">
+        <div class="fake-heading text-balance">
+          This book title does wrap nicely despite its length.
         </div>
-      </details>
+        <p>Vivamus et libero et mi suscipit pulvinar id nec orci. Etiam tempor arcu sit amet luctus ornare. In porttitor
+          dolor eget congue posuere. Sed a semper orci, nec mattis eros. Duis porttitor pretium porta. In ac faucibus
+          eros, a congue justo. Fusce venenatis non nisi at accumsan.</p>
+        <p>Aenean a nulla metus. Donec augue risus, consectetur id bibendum lobortis, feugiat sed nunc. Phasellus in
+          arcu velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi odio, commodo at nulla ac,
+          blandit sagittis diam. Aenean dictum metus quis mollis suscipit. Cras luctus cursus massa eu consequat. Cras
+          tempus
+          orci rhoncus pulvinar consequat.
+        </p>
+      </div>
+    </div>
 
-      <details name="faqs">
-        <summary>Editorial Board</summary>
-        <div class="panel">
-          <p>
-            The editorial board is composed of scholars and practitioners from a
-            broad range of disciplines, institutions, and international research
-            communities.
-          </p>
+    <hr>
 
-          <hr />
-
-          <p>
-            Board members oversee peer review, contribute to strategic
-            direction, and advise on emerging areas of scholarship relevant to
-            the journal’s mission.
-          </p>
-
-          <p>
-            A complete listing of editorial staff and advisory committee members
-            is updated annually and published in the journal’s spring issue.
-          </p>
+    <div class="book-display">
+      <img src="../images/book-covers/rocket.jpg" alt="">
+      <div class="text-holder">
+        <div class="fake-heading text-balance text-center">
+          This book title wraps nicely and is centered.
         </div>
-      </details>
+        <p>Quisque id rhoncus neque. Curabitur at ornare risus. Cras maximus lectus est, sed tristique nisl facilisis
+          eget. Posuere cubilia curae; Integer lacinia, diam sit amet rhoncus pretium, dolor ligula viverra sapien, sit
+          amet
+          euismod dolor ligula ut eros. Aliquam convallis erat non elit tempus, cursus pulvinar magna rhoncus. Nam sed
+          varius turpis.</p>
 
-      <details name="faqs">
-        <summary>Book Review Policies</summary>
-        <div class="panel">
-          <p>
-            The journal welcomes reviews of recently published academic books
-            that contribute substantially to debates within the humanities and
-            social sciences.
-          </p>
+        <p>Nullam in enim dolor. Maecenas tincidunt magna elit, in efficitur augue pulvinar ac. Lorem ipsum dolor sit
+          amet,
+          consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+          curae; Curabitur ligula nisi, cursus ac elit ac, mattis aliquam diam. Nulla nibh neque, sodales eleifend mi
+          et.</p>
+      </div>
+    </div>
+  </section>
 
-          <hr />
+  <h2>Accordions</h2>
+  <h3>Indentical FAQs, No JavaScript</h3>
+  <section id="accordion">
+    <details name="faqs">
+      <summary>Author Guidelines</summary>
+      <div class="panel">
+        <p>
+          Manuscripts submitted for consideration should present original
+          research, critical analysis, or interdisciplinary scholarship
+          relevant to the journal’s scope. Submissions must not exceed 7,000
+          words including references, notes, and appendices.
+        </p>
 
-          <p>
-            Prospective reviewers should contact the book review editor before
-            submitting a review essay. Unsolicited reviews may not be
-            considered.
-          </p>
+        <hr />
 
-          <p>
-            Standard reviews should range between 1,000 and 1,500 words and
-            should critically engage the text’s methodology, contribution, and
-            scholarly significance.
-          </p>
-        </div>
-      </details>
+        <p>
+          Authors are encouraged to include a concise abstract of no more than
+          150 words, followed by 4–6 keywords. Citations should conform to the
+          latest edition of the Chicago Manual of Style. All submissions must
+          be anonymized for peer review.
+        </p>
 
-      <details name="faqs">
-        <summary>Abstracting &amp; Indexing</summary>
-        <div class="panel">
-          <p>
-            The journal is indexed in several major academic databases, ensuring
-            broad discoverability and accessibility for researchers, librarians,
-            and institutions worldwide.
-          </p>
+        <p>
+          Papers should be submitted electronically in Microsoft Word format.
+          Questions regarding manuscript preparation may be directed to
+          <a href="#">Journals Support</a>.
+        </p>
+      </div>
+    </details>
 
-          <hr />
+    <details name="faqs">
+      <summary>Publication Ethics</summary>
+      <div class="panel">
+        <p>
+          The journal adheres to internationally recognized standards
+          concerning publication ethics, plagiarism prevention, and academic
+          integrity. Submitted work must be original and may not be under
+          review elsewhere.
+        </p>
 
-          <p>
-            Articles are currently abstracted in Humanities International
-            Complete, JSTOR, Scopus, and other discipline-specific indexing
-            services.
-          </p>
+        <hr />
 
-          <p>
-            Metadata updates and DOI registrations are processed upon
-            publication to support citation tracking and long-term archival
-            preservation.
-          </p>
-        </div>
-      </details>
+        <p>
+          Authors are responsible for obtaining permissions for copyrighted
+          materials, images, and datasets used within their manuscripts. Cases
+          of duplicate publication or fabricated data will result in immediate
+          rejection.
+        </p>
 
-      <details name="faqs">
-        <summary>Advertising Information</summary>
-        <div class="panel">
-          <p>
-            Limited advertising opportunities are available for academic
-            presses, conferences, research institutes, and educational
-            organizations whose missions align with the journal’s readership.
-          </p>
+        <p>
+          Reviewers and editors are expected to disclose any conflicts of
+          interest that could influence editorial decisions.
+        </p>
+      </div>
+    </details>
 
-          <hr />
+    <details name="faqs">
+      <summary>Editorial Board</summary>
+      <div class="panel">
+        <p>
+          The editorial board is composed of scholars and practitioners from a
+          broad range of disciplines, institutions, and international research
+          communities.
+        </p>
 
-          <p>
-            Advertising placements are accepted on a rolling basis for both
-            print and digital editions. Rates and publication schedules are
-            available upon request.
-          </p>
-        </div>
-      </details>
+        <hr />
 
-      <details name="faqs">
-        <summary>Subscription &amp; Access</summary>
-        <div class="panel">
-          <p>
-            Individual and institutional subscriptions include online access to
-            current and archived issues through the journal’s digital platform.
-          </p>
+        <p>
+          Board members oversee peer review, contribute to strategic
+          direction, and advise on emerging areas of scholarship relevant to
+          the journal’s mission.
+        </p>
 
-          <hr />
+        <p>
+          A complete listing of editorial staff and advisory committee members
+          is updated annually and published in the journal’s spring issue.
+        </p>
+      </div>
+    </details>
 
-          <p>
-            Discounted subscription rates are available for students,
-            independent researchers, and nonprofit organizations. Institutional
-            licenses may include campus-wide authentication and archival access.
-          </p>
+    <details name="faqs">
+      <summary>Book Review Policies</summary>
+      <div class="panel">
+        <p>
+          The journal welcomes reviews of recently published academic books
+          that contribute substantially to debates within the humanities and
+          social sciences.
+        </p>
 
-          <p>
-            For assistance with account access, renewals, or print delivery,
-            please <a href="#">Email Journals</a>.
-          </p>
-        </div>
-      </details>
-    </section>
-  </body>
+        <hr />
+
+        <p>
+          Prospective reviewers should contact the book review editor before
+          submitting a review essay. Unsolicited reviews may not be
+          considered.
+        </p>
+
+        <p>
+          Standard reviews should range between 1,000 and 1,500 words and
+          should critically engage the text’s methodology, contribution, and
+          scholarly significance.
+        </p>
+      </div>
+    </details>
+
+    <details name="faqs">
+      <summary>Abstracting &amp; Indexing</summary>
+      <div class="panel">
+        <p>
+          The journal is indexed in several major academic databases, ensuring
+          broad discoverability and accessibility for researchers, librarians,
+          and institutions worldwide.
+        </p>
+
+        <hr />
+
+        <p>
+          Articles are currently abstracted in Humanities International
+          Complete, JSTOR, Scopus, and other discipline-specific indexing
+          services.
+        </p>
+
+        <p>
+          Metadata updates and DOI registrations are processed upon
+          publication to support citation tracking and long-term archival
+          preservation.
+        </p>
+      </div>
+    </details>
+
+    <details name="faqs">
+      <summary>Advertising Information</summary>
+      <div class="panel">
+        <p>
+          Limited advertising opportunities are available for academic
+          presses, conferences, research institutes, and educational
+          organizations whose missions align with the journal’s readership.
+        </p>
+
+        <hr />
+
+        <p>
+          Advertising placements are accepted on a rolling basis for both
+          print and digital editions. Rates and publication schedules are
+          available upon request.
+        </p>
+      </div>
+    </details>
+
+    <details name="faqs">
+      <summary>Subscription &amp; Access</summary>
+      <div class="panel">
+        <p>
+          Individual and institutional subscriptions include online access to
+          current and archived issues through the journal’s digital platform.
+        </p>
+
+        <hr />
+
+        <p>
+          Discounted subscription rates are available for students,
+          independent researchers, and nonprofit organizations. Institutional
+          licenses may include campus-wide authentication and archival access.
+        </p>
+
+        <p>
+          For assistance with account access, renewals, or print delivery,
+          please <a href="#">Email Journals</a>.
+        </p>
+      </div>
+    </details>
+  </section>
+</body>
+
 </html>

@@ -3,16 +3,48 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5px;
+    padding-block: 15px;
+
 
     background-color: #eee;
+
+    hr {
+        width: 95%;
+    }
 }
 
-.fake-heading {
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: capitalize;
-    max-width: 500px;
+.book-display {
+    display: flex;
+    align-items: start;
+
+    gap: 10px;
+
+    img {
+        max-height: 300px;
+        width: auto;
+    }
+
+    .fake-heading {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    .text-holder {
+        max-width: 500px;
+    }
+
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .text-center {
+        text-align: center;
+    }
 }
+
+
 
 /* accordion/FAQs */
 #accordion {
