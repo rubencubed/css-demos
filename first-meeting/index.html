@@ -12,6 +12,38 @@
 <body>
   <h1>First Meeting CSS Forum</h1>
 
+  <h2>Popup Dialogs (with Search)</h2>
+  <section id="popup">
+    <section id="full-search">
+      <h3>Full Screen Search</h3>
+      <button command="show-modal" commandfor="search-form" class="search"></button>
+      <dialog closedby="any" id="search-form" class="search-form">
+        <form action="" method="get">
+          <input type="text" />
+          <input type="submit" value="Search" />
+        </form>
+      </dialog>
+    </section>
+    <section id="anchored-search">
+      <h3>Anchored Search</h3>
+      <button command="show-modal" commandfor="anchored-form" class="search"></button>
+      <dialog closedby="any" id="anchored-form" class="anchored-form">
+        <form action="" method="get">
+          <input type="text" />
+          <input type="submit" value="Search" />
+        </form>
+      </dialog>
+    </section>
+  </section>
+
+  <h2>Automatic Color Contrast and Hover (Minimal CSS)</h2>
+  <section class="button-holder">
+    <button class="contrast-button primary">Quick Add</button>
+    <button class="contrast-button secondary">Subscribe</button>
+    <button class="contrast-button primary-accent">Quick Add</button>
+    <button class="contrast-button secondary-accent">Subscribe</button>
+  </section>
+
   <h2>Balanced Text Wrap</h2>
   <section id="text-wrap">
     <div class="book-display">
