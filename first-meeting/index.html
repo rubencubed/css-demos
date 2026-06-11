@@ -10,276 +10,567 @@
 </head>
 
 <body>
-  <h1>First Meeting CSS Forum</h1>
-
-  <h2>Popup Dialogs (with Search)</h2>
-  <section id="popup">
-    <section id="full-search">
-      <h3>Full Screen Search</h3>
-      <button command="show-modal" commandfor="search-form" class="search"></button>
-      <dialog closedby="any" id="search-form" class="search-form">
-        <form action="" method="get">
-          <input type="text" />
-          <input type="submit" value="Search" />
-        </form>
-      </dialog>
+  <main>
+    <h1>First CSS Meeting</h1>
+    <p style="text-align: center;"><a href="#:~:text=I'm the Important Section!">Jump to important content farther down
+        the page.</a></p>
+    <section>
+      <h2>Interactive Popups</h2>
+      <section id="popup">
+        <section id="full-search">
+          <h3>Full Screen Search</h3>
+          <button command="show-modal" commandfor="search-form" class="search"></button>
+          <dialog closedby="any" id="search-form" class="search-form">
+            <form action="" method="dialog">
+              <input type="text" />
+              <input type="submit" value="Search" />
+            </form>
+          </dialog>
+        </section>
+        <section id="anchored-search">
+          <h3>Anchored Search</h3>
+          <button command="show-modal" commandfor="anchored-form" class="search"></button>
+          <dialog closedby="any" id="anchored-form" class="anchored-form">
+            <form action="" method="dialog">
+              <input type="text" />
+              <input type="submit" value="Search" />
+            </form>
+          </dialog>
+        </section>
+        <section id="quick-add">
+          <h3>Quick Add</h3>
+          <button command="show-modal" commandfor="quick-add-form" class="flip-button primary-accent">Quick Add
+            +</button>
+          <dialog closedby="any" id="quick-add-form" class="anchored-form">
+            <form action="">
+              <img src="../images/book-covers/rocket.jpg" alt="" />
+              <h2><a href="#">It's Just Rocket Science</a></h2>
+              <div>Trisha Muro </div>
+              <div><strong>Publication Date</strong></div>
+              <div>2026</div>
+              <div>|</div>
+              <div>|</div>
+              <div>|</div>
+              <div>|</div>
+              <div>|</div>
+              <div>|</div>
+              <div>|</div>
+              <div>|</div>
+              <div>|</div>
+              <button type="button" class="flip-button primary-accent">Add to Cart</button>
+            </form>
+          </dialog>
+        </section>
+        <h3>CSS/HTML Used</h3>
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog">Dialog</a>: A
+            popover
+            that includes interactive functionality.</li>
+          <li><a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss">Light
+              Dismiss</a>: No javascript is needed to close out the modal, instead using baked in accessible methods.
+          </li>
+          <li><a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position-try-fallbacks">Position
+              Try Fallbacks</a>: List a set of fallback positions in case an absolutely positioned element would
+            go off the screen.</li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@position-try">@position
+              rule</a>: Define the set of fallback positions.</li>
+        </ul>
+      </section>
     </section>
-    <section id="anchored-search">
-      <h3>Anchored Search</h3>
-      <button command="show-modal" commandfor="anchored-form" class="search"></button>
-      <dialog closedby="any" id="anchored-form" class="anchored-form">
-        <form action="" method="get">
-          <input type="text" />
-          <input type="submit" value="Search" />
-        </form>
-      </dialog>
+
+    <section>
+      <h2>Balanced Text Wrap</h2>
+      <section id="text-wrap">
+        <div class="book-display">
+          <img src="../images/book-covers/boards.jpg" alt="">
+          <div class="text-holder">
+            <div class="fake-heading">
+              This book title is long and does not wrap nicely.
+            </div>
+            <p>Donec in quam ullamcorper, blandit mi id, convallis tellus. Duis a laoreet tortor, in finibus enim. Sed
+              convallis nulla vitae lobortis consequat. Sed porta venenatis augue, at fermentum nisi congue eget. Donec
+              vitae
+              mi ac tortor suscipit molestie eget vitae elit. Morbi tortor sem, fringilla vel quam non, lobortis
+              accumsan.
+            </p>
+            <p>Nullam vehicula fringilla posuere. Morbi commodo sagittis pharetra. Sed nec leo et lectus sollicitudin
+              placerat
+              nec et purus. Quisque ut sollicitudin massa. Integer varius quis enim eu iaculis. Etiam at diam sit amet
+              enim
+              maximus tempor non ut purus. In hac habitasse platea dictumst.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="book-display">
+          <img src="../images/book-covers/rats.jpg" alt="">
+
+          <div class="text-holder">
+            <div class="fake-heading text-balance">
+              This book title does wrap nicely despite its length.
+            </div>
+            <p>Vivamus et libero et mi suscipit pulvinar id nec orci. Etiam tempor arcu sit amet luctus ornare. In
+              porttitor
+              dolor eget congue posuere. Sed a semper orci, nec mattis eros. Duis porttitor pretium porta. In ac
+              faucibus
+              eros, a congue justo. Fusce venenatis non nisi at accumsan.</p>
+            <p>Aenean a nulla metus. Donec augue risus, consectetur id bibendum lobortis, feugiat sed nunc. Phasellus in
+              arcu velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi odio, commodo at nulla ac,
+              blandit sagittis diam. Aenean dictum metus quis mollis suscipit. Cras luctus cursus massa eu consequat.
+              Cras
+              tempus
+              orci rhoncus pulvinar consequat.
+            </p>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="book-display">
+          <img src="../images/book-covers/rocket.jpg" alt="">
+          <div class="text-holder">
+            <div class="fake-heading text-balance text-center">
+              This book title wraps nicely and is centered.
+            </div>
+            <p>Quisque id rhoncus neque. Curabitur at ornare risus. Cras maximus lectus est, sed tristique nisl
+              facilisis
+              eget. Posuere cubilia curae; Integer lacinia, diam sit amet rhoncus pretium, dolor ligula viverra sapien,
+              sit
+              amet
+              euismod dolor ligula ut eros. Aliquam convallis erat non elit tempus, cursus pulvinar magna rhoncus. Nam
+              sed
+              varius turpis.</p>
+
+            <p>Nullam in enim dolor. Maecenas tincidunt magna elit, in efficitur augue pulvinar ac. Lorem ipsum dolor
+              sit
+              amet,
+              consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+              cubilia
+              curae; Curabitur ligula nisi, cursus ac elit ac, mattis aliquam diam. Nulla nibh neque, sodales eleifend
+              mi
+              et.</p>
+          </div>
+        </div>
+      </section>
+      <h3>CSS/HTML Used</h3>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-wrap#balance">Text Wrap
+            Balance</a>:
+          Automatically tries to balance width of text based on lines needed to display text. Used typically for
+          headings.</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-wrap#pretty">Text Wrap
+            Pretty (Progressive Enhancement)</a>: Only available in Chromium. Prevents a single word from being left on
+          the last line. Used typically for paragraphs.</li>
+      </ul>
     </section>
-  </section>
 
-  <h2>Automatic Color Contrast and Hover (Minimal CSS)</h2>
-  <section class="button-holder">
-    <button class="contrast-button primary">Quick Add</button>
-    <button class="contrast-button secondary">Subscribe</button>
-    <button class="contrast-button primary-accent">Quick Add</button>
-    <button class="contrast-button secondary-accent">Subscribe</button>
-  </section>
+    <section>
+      <h2>Accordions (Details/Summary)</h2>
+      <h3>FAQs Copy from Journals</h3>
+      <section id="accordion-clone">
+        <details name="faqs">
+          <summary>Author Guidelines</summary>
+          <div class="panel">
+            <p>
+              Manuscripts submitted for consideration should present original
+              research, critical analysis, or interdisciplinary scholarship
+              relevant to the journal’s scope. Submissions must not exceed 7,000
+              words including references, notes, and appendices.
+            </p>
 
-  <h2>Balanced Text Wrap</h2>
-  <section id="text-wrap">
-    <div class="book-display">
-      <img src="../images/book-covers/boards.jpg" alt="">
-      <div class="text-holder">
-        <div class="fake-heading">
-          This book title is long and does not wrap nicely.
-        </div>
-        <p>Donec in quam ullamcorper, blandit mi id, convallis tellus. Duis a laoreet tortor, in finibus enim. Sed
-          convallis nulla vitae lobortis consequat. Sed porta venenatis augue, at fermentum nisi congue eget. Donec
-          vitae
-          mi ac tortor suscipit molestie eget vitae elit. Morbi tortor sem, fringilla vel quam non, lobortis accumsan.
-        </p>
-        <p>Nullam vehicula fringilla posuere. Morbi commodo sagittis pharetra. Sed nec leo et lectus sollicitudin
-          placerat
-          nec et purus. Quisque ut sollicitudin massa. Integer varius quis enim eu iaculis. Etiam at diam sit amet enim
-          maximus tempor non ut purus. In hac habitasse platea dictumst.</p>
-      </div>
-    </div>
+            <hr />
 
-    <hr>
+            <p>
+              Authors are encouraged to include a concise abstract of no more than
+              150 words, followed by 4–6 keywords. Citations should conform to the
+              latest edition of the Chicago Manual of Style. All submissions must
+              be anonymized for peer review.
+            </p>
 
-    <div class="book-display">
-      <img src="../images/book-covers/rats.jpg" alt="">
+            <p>
+              Papers should be submitted electronically in Microsoft Word format.
+              Questions regarding manuscript preparation may be directed to
+              <a href="#">Journals Support</a>.
+            </p>
+          </div>
+        </details>
 
-      <div class="text-holder">
-        <div class="fake-heading text-balance">
-          This book title does wrap nicely despite its length.
-        </div>
-        <p>Vivamus et libero et mi suscipit pulvinar id nec orci. Etiam tempor arcu sit amet luctus ornare. In porttitor
-          dolor eget congue posuere. Sed a semper orci, nec mattis eros. Duis porttitor pretium porta. In ac faucibus
-          eros, a congue justo. Fusce venenatis non nisi at accumsan.</p>
-        <p>Aenean a nulla metus. Donec augue risus, consectetur id bibendum lobortis, feugiat sed nunc. Phasellus in
-          arcu velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi odio, commodo at nulla ac,
-          blandit sagittis diam. Aenean dictum metus quis mollis suscipit. Cras luctus cursus massa eu consequat. Cras
-          tempus
-          orci rhoncus pulvinar consequat.
-        </p>
-      </div>
-    </div>
+        <details name="faqs">
+          <summary>Publication Ethics</summary>
+          <div class="panel">
+            <p>
+              The journal adheres to internationally recognized standards
+              concerning publication ethics, plagiarism prevention, and academic
+              integrity. Submitted work must be original and may not be under
+              review elsewhere.
+            </p>
 
-    <hr>
+            <hr />
 
-    <div class="book-display">
-      <img src="../images/book-covers/rocket.jpg" alt="">
-      <div class="text-holder">
-        <div class="fake-heading text-balance text-center">
-          This book title wraps nicely and is centered.
-        </div>
-        <p>Quisque id rhoncus neque. Curabitur at ornare risus. Cras maximus lectus est, sed tristique nisl facilisis
-          eget. Posuere cubilia curae; Integer lacinia, diam sit amet rhoncus pretium, dolor ligula viverra sapien, sit
-          amet
-          euismod dolor ligula ut eros. Aliquam convallis erat non elit tempus, cursus pulvinar magna rhoncus. Nam sed
-          varius turpis.</p>
+            <p>
+              Authors are responsible for obtaining permissions for copyrighted
+              materials, images, and datasets used within their manuscripts. Cases
+              of duplicate publication or fabricated data will result in immediate
+              rejection.
+            </p>
 
-        <p>Nullam in enim dolor. Maecenas tincidunt magna elit, in efficitur augue pulvinar ac. Lorem ipsum dolor sit
-          amet,
-          consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-          curae; Curabitur ligula nisi, cursus ac elit ac, mattis aliquam diam. Nulla nibh neque, sodales eleifend mi
-          et.</p>
-      </div>
-    </div>
-  </section>
+            <p>
+              Reviewers and editors are expected to disclose any conflicts of
+              interest that could influence editorial decisions.
+            </p>
+          </div>
+        </details>
 
-  <h2>Accordions</h2>
-  <h3>Indentical FAQs, No JavaScript</h3>
-  <section id="accordion">
-    <details name="faqs">
-      <summary>Author Guidelines</summary>
-      <div class="panel">
-        <p>
-          Manuscripts submitted for consideration should present original
-          research, critical analysis, or interdisciplinary scholarship
-          relevant to the journal’s scope. Submissions must not exceed 7,000
-          words including references, notes, and appendices.
-        </p>
+        <details name="faqs">
+          <summary>Editorial Board</summary>
+          <div class="panel">
+            <p>
+              The editorial board is composed of scholars and practitioners from a
+              broad range of disciplines, institutions, and international research
+              communities.
+            </p>
 
-        <hr />
+            <hr />
 
-        <p>
-          Authors are encouraged to include a concise abstract of no more than
-          150 words, followed by 4–6 keywords. Citations should conform to the
-          latest edition of the Chicago Manual of Style. All submissions must
-          be anonymized for peer review.
-        </p>
+            <p>
+              Board members oversee peer review, contribute to strategic
+              direction, and advise on emerging areas of scholarship relevant to
+              the journal’s mission.
+            </p>
 
-        <p>
-          Papers should be submitted electronically in Microsoft Word format.
-          Questions regarding manuscript preparation may be directed to
-          <a href="#">Journals Support</a>.
-        </p>
-      </div>
-    </details>
+            <p>
+              A complete listing of editorial staff and advisory committee members
+              is updated annually and published in the journal’s spring issue.
+            </p>
+          </div>
+        </details>
 
-    <details name="faqs">
-      <summary>Publication Ethics</summary>
-      <div class="panel">
-        <p>
-          The journal adheres to internationally recognized standards
-          concerning publication ethics, plagiarism prevention, and academic
-          integrity. Submitted work must be original and may not be under
-          review elsewhere.
-        </p>
+        <details name="faqs">
+          <summary>Book Review Policies</summary>
+          <div class="panel">
+            <p>
+              The journal welcomes reviews of recently published academic books
+              that contribute substantially to debates within the humanities and
+              social sciences.
+            </p>
 
-        <hr />
+            <hr />
 
-        <p>
-          Authors are responsible for obtaining permissions for copyrighted
-          materials, images, and datasets used within their manuscripts. Cases
-          of duplicate publication or fabricated data will result in immediate
-          rejection.
-        </p>
+            <p>
+              Prospective reviewers should contact the book review editor before
+              submitting a review essay. Unsolicited reviews may not be
+              considered.
+            </p>
 
-        <p>
-          Reviewers and editors are expected to disclose any conflicts of
-          interest that could influence editorial decisions.
-        </p>
-      </div>
-    </details>
+            <p>
+              Standard reviews should range between 1,000 and 1,500 words and
+              should critically engage the text’s methodology, contribution, and
+              scholarly significance.
+            </p>
+          </div>
+        </details>
 
-    <details name="faqs">
-      <summary>Editorial Board</summary>
-      <div class="panel">
-        <p>
-          The editorial board is composed of scholars and practitioners from a
-          broad range of disciplines, institutions, and international research
-          communities.
-        </p>
+        <details name="faqs">
+          <summary>Abstracting &amp; Indexing</summary>
+          <div class="panel">
+            <p>
+              The journal is indexed in several major academic databases, ensuring
+              broad discoverability and accessibility for researchers, librarians,
+              and institutions worldwide.
+            </p>
 
-        <hr />
+            <hr />
 
-        <p>
-          Board members oversee peer review, contribute to strategic
-          direction, and advise on emerging areas of scholarship relevant to
-          the journal’s mission.
-        </p>
+            <p>
+              Articles are currently abstracted in Humanities International
+              Complete, JSTOR, Scopus, and other discipline-specific indexing
+              services.
+            </p>
 
-        <p>
-          A complete listing of editorial staff and advisory committee members
-          is updated annually and published in the journal’s spring issue.
-        </p>
-      </div>
-    </details>
+            <p>
+              Metadata updates and DOI registrations are processed upon
+              publication to support citation tracking and long-term archival
+              preservation.
+            </p>
+          </div>
+        </details>
 
-    <details name="faqs">
-      <summary>Book Review Policies</summary>
-      <div class="panel">
-        <p>
-          The journal welcomes reviews of recently published academic books
-          that contribute substantially to debates within the humanities and
-          social sciences.
-        </p>
+        <details name="faqs">
+          <summary>Advertising Information</summary>
+          <div class="panel">
+            <p>
+              Limited advertising opportunities are available for academic
+              presses, conferences, research institutes, and educational
+              organizations whose missions align with the journal’s readership.
+            </p>
 
-        <hr />
+            <hr />
 
-        <p>
-          Prospective reviewers should contact the book review editor before
-          submitting a review essay. Unsolicited reviews may not be
-          considered.
-        </p>
+            <p>
+              Advertising placements are accepted on a rolling basis for both
+              print and digital editions. Rates and publication schedules are
+              available upon request.
+            </p>
+          </div>
+        </details>
 
-        <p>
-          Standard reviews should range between 1,000 and 1,500 words and
-          should critically engage the text’s methodology, contribution, and
-          scholarly significance.
-        </p>
-      </div>
-    </details>
+        <details name="faqs">
+          <summary>Subscription &amp; Access</summary>
+          <div class="panel">
+            <p>
+              Individual and institutional subscriptions include online access to
+              current and archived issues through the journal’s digital platform.
+            </p>
 
-    <details name="faqs">
-      <summary>Abstracting &amp; Indexing</summary>
-      <div class="panel">
-        <p>
-          The journal is indexed in several major academic databases, ensuring
-          broad discoverability and accessibility for researchers, librarians,
-          and institutions worldwide.
-        </p>
+            <hr />
 
-        <hr />
+            <p>
+              Discounted subscription rates are available for students,
+              independent researchers, and nonprofit organizations. Institutional
+              licenses may include campus-wide authentication and archival access.
+            </p>
 
-        <p>
-          Articles are currently abstracted in Humanities International
-          Complete, JSTOR, Scopus, and other discipline-specific indexing
-          services.
-        </p>
+            <p>
+              For assistance with account access, renewals, or print delivery,
+              please <a href="#">Email Journals</a>.
+            </p>
+          </div>
+        </details>
+      </section>
+      <section class="timeline" aria-label="History of Johns Hopkins University">
+        <h2>History of Johns Hopkins University</h2>
+        <div id="line"></div>
 
-        <p>
-          Metadata updates and DOI registrations are processed upon
-          publication to support citation tracking and long-term archival
-          preservation.
-        </p>
-      </div>
-    </details>
+        <details id="timeline-1878" name="timeline">
+          <summary>1878 · The Press begins</summary>
+          <p>
+            Daniel Coit Gilman believed publishing was a noble duty of a great research
+            university. In 1878, the Johns Hopkins Publication Agency began publishing
+            the <em>American Journal of Mathematics</em> under J. J. Sylvester.
+          </p>
+        </details>
 
-    <details name="faqs">
-      <summary>Advertising Information</summary>
-      <div class="panel">
-        <p>
-          Limited advertising opportunities are available for academic
-          presses, conferences, research institutes, and educational
-          organizations whose missions align with the journal’s readership.
-        </p>
+        <details id="timeline-1881" name="timeline">
+          <summary>1881 · First book published</summary>
+          <p>
+            The Agency published its first book, <em>Sidney Lanier: A Memorial Tribute</em>,
+            honoring the poet, musician, and early faculty member.
+          </p>
+        </details>
 
-        <hr />
+        <details id="timeline-1882" name="timeline">
+          <summary>1882 · Historical and political studies</summary>
+          <p>
+            Herbert Baxter Adams established the groundbreaking series
+            <em>Johns Hopkins Studies in Historical and Political Science</em>.
+          </p>
+        </details>
 
-        <p>
-          Advertising placements are accepted on a rolling basis for both
-          print and digital editions. Rates and publication schedules are
-          available upon request.
-        </p>
-      </div>
-    </details>
+        <details id="timeline-1891" name="timeline">
+          <summary>1891 · Johns Hopkins Press</summary>
+          <p>
+            The Publication Agency became the Johns Hopkins Press. Since 1972, it has
+            been known as Johns Hopkins University Press, and more recently Hopkins
+            Press for short.
+          </p>
+        </details>
 
-    <details name="faqs">
-      <summary>Subscription &amp; Access</summary>
-      <div class="panel">
-        <p>
-          Individual and institutional subscriptions include online access to
-          current and archived issues through the journal’s digital platform.
-        </p>
+        <details id="timeline-1893" name="timeline">
+          <summary>1893 · Medical publishing begins</summary>
+          <p>
+            When the Johns Hopkins School of Medicine opened, medical publishing by
+            the Press soon followed.
+          </p>
+        </details>
 
-        <hr />
+        <details id="timeline-1977" name="timeline">
+          <summary>1977 · Hopkins Fulfillment Services</summary>
+          <p>
+            Hopkins Fulfillment Services began operations, offering warehousing,
+            fulfillment, and other publishing services to publishing partners.
+          </p>
+        </details>
 
-        <p>
-          Discounted subscription rates are available for students,
-          independent researchers, and nonprofit organizations. Institutional
-          licenses may include campus-wide authentication and archival access.
-        </p>
+        <details id="timeline-1995" name="timeline">
+          <summary>1995 · Project MUSE launches</summary>
+          <p>
+            Project MUSE launched with support from the Andrew W. Mellon Foundation
+            and the National Endowment for the Humanities, in collaboration with the
+            University’s Sheridan Libraries.
+          </p>
+        </details>
 
-        <p>
-          For assistance with account access, renewals, or print delivery,
-          please <a href="#">Email Journals</a>.
-        </p>
-      </div>
-    </details>
-  </section>
+        <details id="timeline-today" name="timeline">
+          <summary>Today · A global university press</summary>
+          <p>
+            Hopkins Press remains one of the world’s largest university presses,
+            publishing and distributing works that advance new knowledge worldwide.
+          </p>
+        </details>
+      </section>
+      <h3>CSS/HTML Used</h3>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details">Details</a>: The
+          whole
+          container</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/summary">Summary</a>: The part
+          shown when the content is hidden</li>
+        <li><a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::details-content">::details-content</a>:
+          Used to style the content inside the details.</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:open">[open]</a>: Used to
+          apply styles when the details is open.</li>
+      </ul>
+    </section>
+    <h3>Timeline</h3>
+
+    <section>
+      <h2>Automatic Color Contrast</h2>
+      <section class="button-holder">
+        <button class="flip-button primary">Quick Add</button>
+        <button class="flip-button secondary">Subscribe</button>
+        <button class="flip-button primary-accent">Quick Add</button>
+        <button class="flip-button secondary-accent">Subscribe</button>
+      </section>
+      <h3>CSS/HTML Used</h3>
+      <ul>
+        <li><a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color">contrast-color
+            function</a>: Automatically calculates the best color contrast (black or white) based on an input color,
+          e,g,
+          the background color. Guarantees at least WCAG AA compliance.</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors">Relative
+            Colors</a>: Colors can be darkened, lightened, shifted around the color wheel automatically without the need
+          for
+          determining the fixed colors with a separate tool.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Automatic Light/Dark Mode</h2>
+      <h3>CSS/HTML Used</h3>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color-scheme">Color
+            Scheme</a>: Root level declaration that enables light-dark() and automatically switches undefined
+          colors to <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/system-color#syntax">canvas
+            (background) and canvasText (color)</a> on dark mode.</li>
+        <li><a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark">light-dark()</a>:
+          Allows two colors to be defined, one for each of light and dark modes. I recommend defining this once on a
+          root-level variable when possible.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Lorem Ipsum</h2>
+      <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam faucibus dolor in
+        rhoncus commodo. Vestibulum condimentum finibus dui. Vivamus dolor massa, eleifend sed mauris in, cursus auctor
+        augue. Nunc malesuada magna ac dapibus laoreet. Nunc mattis risus sapien, commodo egestas ipsum vestibulum a.
+        Sed lobortis eleifend sem, eget dapibus urna consectetur sit amet. Donec feugiat ipsum neque, sit amet tincidunt
+        odio fermentum non. Ut non hendrerit augue. Aenean sem justo, eleifend ac interdum at, sollicitudin ac justo.
+      </p>
+      <p>Quisque ullamcorper consequat accumsan. Quisque hendrerit turpis quis neque efficitur, vel posuere neque
+        tempus. Cras ut scelerisque arcu. Quisque ut ornare ex, in pretium nulla. Interdum et malesuada fames ac ante
+        ipsum primis in faucibus. Sed rhoncus turpis sit amet quam cursus pulvinar. Nullam placerat vestibulum nisl. Nam
+        blandit luctus justo sit amet consequat. Quisque ultrices justo vel iaculis varius. In eu ligula at felis
+        lacinia hendrerit at eget ex. Vestibulum accumsan magna urna, vel auctor odio volutpat et.</p>
+      <p>Mauris aliquam quam velit, ut feugiat orci condimentum ut. Cras posuere quis erat id rutrum. Morbi vehicula
+        libero libero, vel dictum lorem dictum sed. Duis risus diam, finibus et ultrices ut, molestie in leo. Quisque
+        dictum euismod dignissim. Phasellus sed ex tempor, convallis justo ac, condimentum turpis. Sed a sapien nec
+        massa aliquam ornare. Curabitur sed gravida urna. Vivamus euismod risus et risus auctor, eget bibendum risus
+        varius. Ut quis risus pharetra, tempus erat vel, scelerisque lacus. Aenean sit amet libero maximus, eleifend
+        velit ac, vestibulum urna. Praesent bibendum, mauris vitae hendrerit cursus, urna augue semper turpis, et porta
+        lorem erat in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae aliquet justo, quis
+        condimentum mi.</p>
+      <p>Morbi pretium facilisis lorem ultricies sodales. Pellentesque odio est, hendrerit sed massa quis, tempor cursus
+        ipsum. Nam convallis ante tellus, quis scelerisque eros feugiat vel. Phasellus in ipsum in lorem malesuada
+        facilisis. Morbi laoreet ligula vel augue lobortis posuere. Cras consequat mi sed augue porttitor, ut tempor mi
+        feugiat. Ut ullamcorper mattis risus et aliquam. Nam ultrices vitae sem ut convallis. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Pellentesque malesuada tempus vehicula. Proin in laoreet dui. Proin quis
+        congue urna. Mauris ullamcorper eleifend vulputate. Sed vitae aliquet turpis, in varius tellus. Suspendisse
+        pharetra lacinia tortor, sed vulputate lectus laoreet sed.</p>
+      <p>Curabitur posuere mollis magna ac suscipit. Mauris vestibulum volutpat diam et suscipit. Sed rutrum risus
+        purus, vel cursus lectus pretium porta. Curabitur nec eleifend leo, sit amet interdum neque. Etiam ullamcorper
+        leo a orci facilisis scelerisque. Nunc at egestas tortor, quis tempus felis. Duis egestas iaculis sapien vel
+        molestie.</p>
+      <p>Vivamus efficitur eu augue a consectetur. Sed semper nec ex sit amet ultricies. Vivamus efficitur rhoncus ante.
+        Curabitur et auctor dolor, sed tempor mauris. Nam auctor diam ut semper rhoncus. Mauris tincidunt massa vel
+        lectus venenatis sodales. Etiam sodales congue enim eget fringilla. Nunc et venenatis lorem. Morbi consectetur
+        lectus mi, ut bibendum metus lobortis eu.</p>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus
+        efficitur porttitor. Phasellus lacus est, ornare ut sapien euismod, malesuada finibus neque. Fusce scelerisque
+        mauris erat, feugiat iaculis est dictum quis. Donec quis justo mauris. Vivamus eget lectus ut risus mollis
+        vestibulum a imperdiet odio. Curabitur ut pulvinar purus. Nam luctus erat in turpis ornare, a auctor nunc
+        consectetur. Ut viverra, ipsum quis consectetur gravida, lectus libero interdum dui, in lacinia tortor enim non
+        tellus. Sed convallis non ex ut viverra.</p>
+      <p>Donec nec urna ac ex porta blandit. Nullam turpis quam, luctus sit amet tristique non, commodo ac libero. Proin
+        pulvinar augue ultrices velit luctus, et ultricies eros tincidunt. Cras id mi nec diam viverra congue. Praesent
+        suscipit massa et placerat efficitur. Morbi felis arcu, vehicula eget porta sed, sollicitudin convallis tortor.
+        Morbi gravida vel sem at consectetur. In placerat massa nec ex vestibulum dapibus. Donec non metus sem.
+        Phasellus eget feugiat metus. Nunc vitae vestibulum ante. Fusce nunc libero, pharetra quis volutpat eu, varius
+        sit amet purus. Nulla bibendum turpis tortor, eu posuere leo dignissim eget. Nullam sit amet ullamcorper justo,
+        sed rhoncus libero.</p>
+      <p>Mauris justo tellus, mattis nec faucibus eu, semper eu lectus. Vivamus vehicula suscipit enim, in feugiat
+        turpis venenatis eu. Pellentesque porttitor velit enim, ut fermentum sem posuere feugiat. Quisque nisl purus,
+        vestibulum id interdum ac, bibendum non elit. Maecenas eu libero maximus, convallis magna vel, maximus turpis.
+        Integer auctor, elit vel suscipit fringilla, nunc lorem venenatis augue, non egestas ipsum justo sed dui. Proin
+        euismod lacus at purus aliquet ullamcorper semper sit amet est. In hac habitasse platea dictumst. Mauris at est
+        laoreet erat imperdiet porttitor. In et nisi quis quam interdum tincidunt sed non metus.</p>
+      <p>Praesent purus ante, placerat ut justo vitae, volutpat semper felis. Vestibulum id blandit lacus, at euismod
+        velit. Etiam dictum tellus ac ante viverra volutpat. Vivamus semper magna odio, quis pellentesque eros
+        pellentesque sed. Fusce ornare, nunc eget efficitur iaculis, sem tellus euismod metus, sodales faucibus quam
+        dolor sed magna. Maecenas facilisis purus vel lacinia lobortis. Mauris ligula lectus, fermentum eu rhoncus eu,
+        pharetra sit amet metus. Morbi pharetra condimentum lacus non volutpat. Etiam auctor facilisis mauris nec
+        pellentesque. Vivamus dignissim rutrum leo, vitae facilisis ante accumsan sed. Mauris et sem suscipit turpis
+        convallis consequat. Pellentesque a odio eu nisi gravida luctus. Duis libero dui, lacinia sit amet nulla id,
+        pellentesque elementum turpis.</p>
+      <p>Duis quis blandit arcu, ut eleifend libero. Vestibulum dolor tellus, vestibulum a massa vel, lobortis rhoncus
+        est. In nulla purus, sodales dapibus ipsum at, consequat dapibus lorem. Suspendisse quis faucibus dolor. Donec
+        sagittis ex efficitur tincidunt molestie. Orci varius natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Vivamus id vulputate ipsum. Praesent at mauris a felis fringilla tempus.</p>
+      <p>Ut gravida dictum diam. In ante ante, volutpat non euismod et, maximus quis tortor. Nam vitae sapien eget arcu
+        venenatis iaculis sed nec ligula. Pellentesque auctor lorem vel elit tempor, a tempus diam consectetur.
+        Pellentesque eleifend, leo eu semper egestas, nibh nulla porttitor mauris, sed dignissim nulla lectus tempus
+        magna. Quisque venenatis lectus pretium, finibus metus quis, elementum risus. Ut semper pellentesque lectus in
+        eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec
+        tincidunt iaculis nisl, eu aliquam nisi porttitor ac. Donec id sapien in mauris pretium condimentum. Donec
+        vehicula metus metus, nec aliquam turpis sagittis non. Sed fermentum nulla id dui luctus auctor. Phasellus
+        tristique malesuada placerat. Donec ultrices tempus vestibulum.</p>
+      <h2 id="important">I'm the Important Section!</h2>
+      <p>Aenean ut mauris varius, imperdiet ipsum mollis, maximus nunc. Phasellus venenatis consequat dictum. Sed non
+        odio tortor. Donec et pulvinar diam. Cras posuere, velit ut tristique aliquet, elit diam hendrerit odio, nec
+        dignissim eros quam eu enim. Sed gravida egestas purus in lacinia. Quisque elementum erat non justo aliquam, eu
+        fermentum arcu lacinia. Phasellus vehicula venenatis eros, vel venenatis est auctor et.</p>
+      <p>Vivamus iaculis eu turpis at molestie. Donec tempus consectetur neque non viverra. Curabitur sit amet enim sed
+        orci imperdiet eleifend. Nullam tristique posuere ex, ut suscipit diam tincidunt ut. Maecenas tincidunt urna at
+        justo scelerisque vulputate. Aliquam nunc felis, molestie quis tempus et, volutpat non metus. Ut rutrum pharetra
+        augue quis congue. Morbi blandit tempus lorem, feugiat tristique purus convallis nec. Duis facilisis gravida
+        neque. Duis nec cursus felis. Mauris porttitor est ac dapibus varius. Nullam nec tempor enim. Aenean id
+        venenatis mauris, vel vehicula arcu. Aenean arcu diam, ullamcorper non ipsum tempus, tincidunt aliquet justo.
+        Nullam pellentesque tellus metus, sit amet suscipit mi auctor at. Phasellus dolor eros, pretium ac molestie vel,
+        efficitur sit amet velit.</p>
+      <p>Phasellus porttitor ligula sit amet maximus gravida. Aliquam varius, odio ac pharetra luctus, nisi sem lobortis
+        eros, viverra bibendum purus dolor eu lectus. Nulla accumsan lacinia vehicula. Curabitur faucibus felis sed
+        felis aliquam eleifend. Morbi lacinia tellus vel velit vestibulum, sed convallis eros faucibus. Vestibulum ante
+        ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis enim lectus, fermentum posuere
+        aliquam in, sollicitudin eget mauris. Sed pharetra nisl non nisi mattis mollis.</p>
+      <h3>CSS/HTML Used</h3>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@keyframes">@keyframes</a>:
+          Define an animation according to specific timings. The <a
+            href="https://webcode.tools/css-generator/keyframe-animation">CSS Animation Tool</a> (many other options
+          available) can help you build the animation.</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:target">:target pseudo
+            class</a>: Style an element based on its status as the target of a link (including when using text
+          fragments).</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::target-text">::target-text
+            pseudo element</a>: Style just the text when the target of a text fragment specifically (i.e. does not work
+          for id targeting like :target does).</li>
+      </ul>
+    </section>
+  </main>
 </body>
 
 </html>

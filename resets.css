@@ -1,3 +1,15 @@
+:root {
+    /* allows transitions between values like "auto" */
+    interpolate-size: allow-keywords;
+
+    color-scheme: light dark;
+
+    --primary-color: light-dark(#002d72, #febe10);
+    --secondary-color: light-dark(#68ace5, #f16300);
+    --primary-accent-color: light-dark(#febe10, #002d72);
+    --secondary-accent-color: light-dark(#f16300, #68ace5);
+}
+
 html,
 body {
     margin: 0;
@@ -12,11 +24,11 @@ h4,
 h5,
 h6 {
     text-align: center;
-    margin-block: 8px;
+    margin-block: 0;
 }
 
 a {
-    color: #002D72;
+    color: var(--primary-color);
 
     &:hover {
         text-decoration: none;
@@ -26,4 +38,13 @@ a {
 section {
     margin-inline: auto;
     width: min(980px, calc(100% - 2rem));
+}
+
+main > * {
+    margin-block-start: 20px;
+}
+
+/* Elements in prose get top margins according to their own font size */
+.prose > * + * {
+    margin-block-start: var(--prose-flow, 0.75em);
 }
