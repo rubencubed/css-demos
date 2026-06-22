@@ -48,3 +48,4 @@ main > * {
 .prose > * + * {
     margin-block-start: var(--prose-flow, 0.75em);
 }
+/* update so that anything following a header does not have the margin */

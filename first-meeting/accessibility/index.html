@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Developments in CSS/HTML</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../resets.css" />
+</head>
+
+<body>
+    <main>
+        <h1>New(ish) HTML/CSS Features that Improve Accessibility</h1>
+        <p>Over the past few months and years, there have been tremendous improvements to CSS and HTML that reduce or
+            eliminate the need to use JavaScript to achieve certain design patterns. These new CSS and HTML options are
+            more semantic and natively manange focus state in the way the web component is <em>intended</em> to be used.
+            Moreover—since this can be a concern for the design oriented folks—there is no need to sacrifice the visual
+            component of the templates. Often, these new patterns actually make it easier to build designs that excite
+            and engage.</p>
+
+        <h2>Popups with <code>&lt;dialog&gt;</code></h2>
+        <p>A <code>&lt;dialog&gt;</code> (modal) is hidden by default. When a user activates a button with
+            <code>command="show-modal"</code> and <code>commandfor="[dialog]-id"</code>, the modal
+            is opened. The modal can then be closed with the ESC key or by clicking away from the modal (support for an
+            explicit "close" button is not fully cross browser). Focus jumps inside of the modal on opening and reverts
+            to the opening button when the modal is dismissed.
+        </p>
+
+        <h3>Examples</h3>
+        <section id="full-search">
+            <button command="show-modal" commandfor="search-form" class="search"></button>
+            <dialog closedby="any" id="search-form" class="search-form">
+                <form action="" method="dialog">
+                    <input type="text" />
+                    <input type="submit" value="Search" />
+                </form>
+            </dialog>
+        </section>
+        <section id="anchored-search">
+            <button command="show-modal" commandfor="anchored-form" class="search"></button>
+            <dialog closedby="any" id="anchored-form" class="anchored-form">
+                <form action="" method="dialog">
+                    <input type="text" />
+                    <input type="submit" value="Search" />
+                </form>
+            </dialog>
+        </section>
+        <section id="quick-add">
+            <button command="show-modal" commandfor="quick-add-form" class="flip-button primary-accent">Quick
+                Add</button>
+            <dialog closedby="any" id="quick-add-form" class="anchored-form">
+                <form action="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac ipsum in lorem dignissim
+                        pretium. Duis eu tellus dolor. Phasellus dui lectus, faucibus ac vestibulum nec, dignissim eget
+                        elit. Ut et dui mi. Fusce ac pulvinar lacus. Nunc cursus turpis ut porta venenatis. Vivamus
+                        tincidunt quis nulla ac suscipit. Maecenas vulputate porttitor dui, vel viverra neque fringilla
+                        sed. Quisque euismod mauris non maximus elementum. Nullam pharetra sem vitae ultricies sagittis.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi ut
+                        erat id mi sollicitudin dapibus. Nunc fringilla egestas ultrices.</p>
+                    <p>Pellentesque quis fringilla risus, ut rutrum mauris. Proin rhoncus est eu luctus mollis. Donec
+                        viverra, diam vel suscipit suscipit, lacus felis aliquet nulla, vitae varius dui neque vitae
+                        urna. In egestas porta nisl vel aliquam. Suspendisse dictum convallis tristique. Cras at leo
+                        sem. Sed blandit nibh erat, id pretium lorem consequat a. Fusce nisi ligula, consectetur et eros
+                        vitae, aliquam eleifend ipsum. Cras nec risus pellentesque, dapibus tellus eu, consectetur
+                        ipsum.</p>
+                    <p>Morbi laoreet semper lorem nec mollis. Nam dolor nunc, rhoncus vel eleifend nec, condimentum et
+                        massa. Nullam pellentesque iaculis finibus. Sed ultricies fringilla diam sit amet venenatis.
+                        Praesent sodales, mauris sed faucibus commodo, enim ante iaculis orci, quis lacinia diam sapien
+                        a est. Vivamus erat quam, blandit et cursus pulvinar, luctus volutpat elit. Praesent aliquam,
+                        turpis eu condimentum ultrices, ante libero gravida magna, eu convallis massa mauris at quam.
+                        Cras laoreet quam mauris, non venenatis neque pretium eu. Praesent rhoncus enim sed convallis
+                        scelerisque.</p>
+                    <p>Aenean nec elit arcu. Nam vel imperdiet metus. Curabitur dignissim, sapien ut volutpat malesuada,
+                        sem risus auctor quam, nec egestas sapien neque ac tortor. In a finibus ante. Donec rhoncus erat
+                        purus, nec pretium nibh bibendum ut. Aenean id molestie neque, quis laoreet lorem. Morbi
+                        vestibulum mauris eros, vel tristique lacus gravida ut. Sed tristique risus in porta tempor.</p>
+                    <p>Morbi sagittis, nisi et molestie rutrum, massa ipsum imperdiet purus, id bibendum magna augue in
+                        lorem. Praesent eget neque sed sem dapibus commodo id ac erat. Maecenas facilisis sed ligula in
+                        finibus. Integer hendrerit condimentum purus, quis consectetur dolor viverra eu. Quisque
+                        malesuada ac lacus ac feugiat. Maecenas libero dolor, cursus eget sapien id, sollicitudin auctor
+                        mauris. Nam dui sapien, elementum eget laoreet a, auctor in lectus. Etiam tincidunt ante sit
+                        amet arcu congue semper. Nullam auctor id nibh in imperdiet. Vivamus dapibus dapibus lorem, quis
+                        mattis risus egestas quis. Sed sit amet magna tortor. Nunc pharetra nisi quis sapien condimentum
+                        elementum.</p>
+                    <p>Maecenas euismod sodales dignissim. Mauris rhoncus, ligula ut euismod vulputate, nisl libero
+                        facilisis dolor, nec convallis sem sem ac nulla. In nulla magna, volutpat et iaculis in, feugiat
+                        eu ligula. Nunc blandit sodales magna. Ut tristique nulla ac urna rhoncus imperdiet a sed
+                        tellus. Pellentesque cursus faucibus erat, sed dignissim orci semper ut. Phasellus vel mattis
+                        felis. Pellentesque luctus eget mi non vehicula. Donec pulvinar interdum mi, id cursus lectus.
+                        Nullam eu vehicula dui, nec ornare mi. Maecenas vel ultrices dui, vitae facilisis nisi. Maecenas
+                        sed iaculis risus. Donec sed tempus nunc, viverra venenatis urna. Cras sed dolor metus.</p>
+                    <p>Suspendisse enim metus, euismod nec sollicitudin sit amet, facilisis non erat. Proin venenatis
+                        elit vel ligula dignissim varius. Praesent dignissim eros ipsum. Curabitur a lectus eu est
+                        efficitur condimentum non a risus. Proin imperdiet mi non orci interdum viverra. Ut vulputate
+                        sapien quis augue sodales, in scelerisque diam ornare. Nullam sit amet efficitur eros. Nunc
+                        tincidunt magna lorem, in vulputate augue finibus vitae.</p>
+                    <p>Morbi rutrum venenatis arcu vitae lobortis. Quisque ut nisi ac urna imperdiet aliquet eget et
+                        massa. Quisque consequat ex eget orci scelerisque, blandit pellentesque nisi dictum. Vestibulum
+                        vel odio et augue auctor placerat eu vitae urna. Ut quis porta tellus. Maecenas ullamcorper
+                        pellentesque risus, eu semper turpis porttitor id. Ut fermentum ex dapibus risus porta
+                        sollicitudin. Donec congue orci ac dui vestibulum, quis rutrum est mattis. Fusce porta egestas
+                        ultricies. Suspendisse suscipit libero purus, quis interdum est euismod lobortis. Fusce quis
+                        varius erat. Fusce tempor ex quis odio viverra laoreet.</p>
+                    <p>Fusce convallis orci a orci dictum vehicula. Quisque ullamcorper lorem molestie blandit
+                        vulputate. Ut blandit facilisis turpis, sed maximus ligula lacinia sit amet. Sed maximus
+                        venenatis dolor id mattis. Nam pellentesque magna et nunc malesuada vulputate. Phasellus semper
+                        consequat orci, quis malesuada nibh varius sit amet. Morbi porta dapibus tortor, in eleifend
+                        lacus fermentum a. Quisque ut ultrices tortor. Pellentesque pretium felis odio, vel tempus risus
+                        hendrerit id. Donec suscipit euismod imperdiet. Sed viverra finibus ante, vel finibus diam
+                        mattis ac. Fusce non viverra elit. Nunc facilisis in eros at tempus. Proin sed arcu eget est
+                        efficitur aliquam. Morbi egestas tincidunt lobortis. Quisque gravida enim quis ultricies
+                        facilisis.</p>
+                    <p>Nullam ut dui orci. Suspendisse ultricies sapien a dolor consequat luctus. Suspendisse sit amet
+                        fringilla est. Nam purus nibh, dignissim eget magna sit amet, imperdiet lobortis turpis.
+                        Praesent viverra et nisi quis condimentum. Sed porta elementum massa id condimentum. Proin
+                        viverra pharetra nulla, nec sagittis dui commodo eu. Interdum et malesuada fames ac ante ipsum
+                        primis in faucibus. Nam ac libero sed orci tempus interdum. Morbi eget neque sapien. Nunc
+                        mattis, neque vel sodales congue, odio velit dapibus purus, elementum commodo sem massa quis
+                        lectus. Etiam ultricies aliquet augue at malesuada. Nulla consectetur mauris vitae justo
+                        aliquam, ac interdum nisi vulputate. Aenean gravida cursus mi, ac fermentum augue ultricies non.
+                    </p>
+                    <button type="button" class="flip-button primary-accent">Submit Form</button>
+                </form>
+            </dialog>
+        </section>
+
+
+        <p>This combines well with <strong>anchor positioning</strong>: the dialog can be a sibling of the button
+            (rather than a child).</p>
+    </main>
+</body>
+
+</html>

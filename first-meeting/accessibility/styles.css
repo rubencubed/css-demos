@@ -1,0 +1,316 @@
+main {
+    margin-inline: auto;
+    width: min(720px, calc(100% - 2rem));
+}
+
+h1 {
+    text-wrap: balance;
+}
+
+button.search {
+    --image-width: 40px;
+    appearance: none;
+    border: none;
+    box-sizing: content-box;
+    padding: 3px;
+
+    width: calc((var(--image-width) * sqrt(2)));
+    height: calc((var(--image-width) * sqrt(2)));
+    background: none;
+    outline: none;
+
+    cursor: pointer;
+
+    background-color: white;
+    background-image: url('../search-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: var(--image-width);
+
+    border-radius: 10em;
+
+    transition: box-shadow 300ms;
+
+    &:hover {
+        cursor: auto;
+
+        box-shadow: 0 0 5px oklch(from var(--main-color, black) l c h / 0.7);
+    }
+}
+
+#full-search,
+#anchored-search,
+#quick-add {
+    margin-block-end: 1.25rem;
+}
+
+#full-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .search-form {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+
+        transition: opacity 300ms ease-in;
+        transition-behavior: allow-discrete;
+
+        width: min(calc(100% - 2rem), 400px);
+
+        form {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        input[type='text'] {
+            border: none;
+            border-radius: 10em;
+            outline: none;
+            padding: 0.5em 1em;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1.25rem;
+        }
+
+        input[type='submit'] {
+            padding: 0.5em 1em;
+
+            align-self: end;
+            border-radius: 10em;
+            border: none;
+
+            font-size: 1.25rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            background-color: #002d72;
+            color: #fff;
+
+            user-select: none;
+            cursor: pointer;
+        }
+
+        &::backdrop {
+            background-color: oklch(0 0 0 / 0.7);
+            transition: opacity 200ms ease;
+            transition-behavior: allow-discrete;
+        }
+    }
+
+    @starting-style {
+        .search-form,
+        .search-form::backdrop {
+            opacity: 0;
+        }
+    }
+
+    .search-form:not([open]),
+    .search-form:not([open])::backdrop {
+        opacity: 0;
+    }
+}
+
+#anchored-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button.search {
+        anchor-name: --search-button;
+        /* align-self: end; */
+
+        &:active {
+            box-shadow: 0 0 5px oklch(from var(--main-color, black) l c h / 0.7);
+        }
+    }
+
+    .anchored-form {
+        position: absolute;
+        position-anchor: --search-button;
+        top: anchor(bottom);
+        right: auto;
+        left: anchor(right);
+        position-try-fallbacks: --below-right, --below-left;
+
+        margin-block: 4px;
+        margin-inline: 0;
+
+        border: none;
+        background-color: rgb(109, 182, 255);
+        padding: 1rem;
+        border-radius: 0.5em;
+
+        transition: opacity 300ms ease-in;
+        transition-behavior: allow-discrete;
+
+        width: min(calc(100% - 2rem), 400px);
+
+        form {
+            width: 100%;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+        }
+
+        input[type='text'] {
+            border: 1px solid black;
+            border-radius: 0.5rem;
+            outline: none;
+            padding: 0.5em 1em;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1.25rem;
+        }
+
+        input[type='submit'] {
+            padding: 0.5em 1em;
+
+            align-self: end;
+            border-radius: 0.5rem;
+            border: none;
+
+            font-size: 1.25rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            background-color: #002d72;
+            color: #fff;
+
+            user-select: none;
+            cursor: pointer;
+        }
+
+        &::backdrop {
+            display: none;
+        }
+    }
+
+    @starting-style {
+        .anchored-form {
+            opacity: 0;
+        }
+    }
+
+    .anchored-form:not([open]) {
+        opacity: 0;
+    }
+}
+
+#quick-add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #quick-add-form {
+        border: none;
+        padding-inline: 0.5rem;
+        margin: 0;
+        background-color: #eee;
+
+        position: fixed;
+
+        inset-block: 0;
+        inset-inline-start: auto;
+        inset-inline-end: 0;
+
+        width: 300px;
+        height: 100%;
+
+        overflow-y: auto;
+
+        transform: translateX(100%);
+
+        /* progressive enhancement: animating from display */
+        transition:
+            transform 500ms ease,
+            display 500ms ease allow-discrete;
+
+        &::backdrop {
+            display: none;
+        }
+
+        img {
+            width: 150px;
+            height: auto;
+        }
+
+        h2 {
+            text-align: left !important;
+        }
+
+        form > * {
+            margin-block-end: 0.5rem;
+        }
+    }
+
+    #quick-add-form[open] {
+        transform: translateX(0);
+    }
+
+    @starting-style {
+        #quick-add-form[open] {
+            transform: translateX(100%);
+        }
+    }
+}
+
+.flip-button {
+    --button-background-color: black;
+    --transition-timing: 750ms;
+    margin-block: 0.5rem;
+
+    border: none;
+    border-radius: 50rem;
+
+    background-color: var(--button-background-color);
+    color: contrast-color(var(--button-background-color));
+
+    padding: 0.5em 1em;
+    font-weight: 700;
+    font-size: 1.25rem;
+
+    transition:
+        background-color var(--transition-timing) ease,
+        color var(--transition-timing) ease;
+
+    &.primary {
+        --button-background-color: var(--primary-color);
+
+        &:hover {
+            --button-background-color: var(--primary-accent-color);
+        }
+    }
+
+    &.secondary {
+        --button-background-color: var(--secondary-color);
+
+        &:hover {
+            --button-background-color: var(--secondary-accent-color);
+        }
+    }
+
+    &.primary-accent {
+        --button-background-color: var(--primary-accent-color);
+
+        &:hover {
+            --button-background-color: var(--primary-color);
+        }
+    }
+
+    &.secondary-accent {
+        --button-background-color: var(--secondary-accent-color);
+
+        &:hover {
+            --button-background-color: var(--secondary-color);
+        }
+    }
+
+    transition:
+        color 750ms ease,
+        background-color 750ms ease;
+}
